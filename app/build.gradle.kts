@@ -5,6 +5,12 @@ plugins {
     id("kotlin-kapt")
 }
 
+
+////Android Gradle Plugin Version 4.1.3 -> 7.0.4
+////Gradle Version 6.5 -> 7.3.1
+////Build Tools Version 30 -> 31
+////Gradle JDK 1.8 -> 16
+////Kotlin Version 1.5.30 -> 1.6.0
 android {
     namespace = "com.example.shesafeapp"
     compileSdk = 34
@@ -76,10 +82,11 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     //// Dagger - Hilt
-    implementation("com.google.dagger:hilt-android:2.49")
-    kapt("com.google.dagger:hilt-android-compiler:2.49")
+    implementation("com.google.dagger:hilt-android:2.46")
+    kapt("com.google.dagger:hilt-android-compiler:2.46")
     kapt("androidx.hilt:hilt-compiler:1.2.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    annotationProcessor("com.google.dagger:dagger-compiler:2.46")
 
     //implementation 'com.google.dagger:hilt-android:2.42'
     //implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
